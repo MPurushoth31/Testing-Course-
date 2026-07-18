@@ -5,42 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Excel Basic to Advanced Live Masterclass in Tamil by DATA WITH MAARI. Weekend live classes, recordings, practice files and resume building.">
 <title>Excel Basic to Advanced Live Masterclass | DATA WITH MAARI</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="topbar">🔥 Tamil-ல் Excel கற்றுக்கொள்ளுங்கள் — Weekend Live Masterclass • Limited Seats</div>
-<header class="nav">
-  <a class="brand" href="#home"><img src="assets/logo.png" alt="DATA WITH MAARI logo"><span>DATA WITH <b>MAARI</b></span></a>
-  <button class="menu" aria-label="Open menu">☰</button>
+<header class="nav" id="navbar">
+  <a class="brand" href="#home"><img src="assets/logo.png" alt="DATA WITH MAARI logo" onerror="this.src='https://placehold.co/48x48/0a9f55/white?text=DM'"><span>DATA WITH <b>MAARI</b></span></a>
+  <button class="menu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
   <nav>
-    <a href="#about">Course</a><a href="#curriculum">Curriculum</a><a href="#benefits">Benefits</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    <a href="#about">Course</a>
+    <a href="#career">Career</a>
+    <a href="#curriculum">Curriculum</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
     <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Enroll Now ↗</a>
   </nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="light light1"></div>
-<div class="light light2"></div>
-<div class="light light3"></div>
- <div class="orb o1"></div><div class="orb o2"></div>
+ <div class="hero-aurora"></div>
+ 
+ <!-- Floating Background Elements -->
+ <div class="float-element fe-1">ƒx</div>
+ <div class="float-element fe-2">%</div>
+ <div class="float-element fe-3">$</div>
+ <div class="float-element fe-4">📊</div>
+
  <div class="hero-copy reveal">
-   <div class="eyebrow">🚀 5-WEEK LIVE ONLINE PROGRAM</div>
+   <div class="eyebrow glow-border">🚀 5-WEEK LIVE ONLINE PROGRAM</div>
    <h1>Excel Basic to Advanced<br><span>Live Masterclass</span></h1>
    <p class="tamil">Excel-ஐ அடிப்படையிலிருந்து Advanced Level வரை <b>தமிழில்</b> கற்றுக்கொண்டு, உங்கள் Career Skills-ஐ Upgrade செய்யுங்கள்.</p>
+   
+   <!-- New: Student Trust Avatar Stack -->
+   <div class="student-trust">
+     <div class="avatars">
+       <div class="av"></div><div class="av"></div><div class="av"></div><div class="av">+</div>
+     </div>
+     <span>Join <b>500+</b> successful students</span>
+   </div>
+
    <div class="hero-actions">
-     <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Join Masterclass <span>→</span></a>
-     <a class="btn ghost" href="#curriculum">View Curriculum ↓</a>
+     <a class="btn primary magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Join Masterclass <span>→</span></a>
+     <a class="btn ghost magnetic" href="#curriculum">View Curriculum ↓</a>
    </div>
    <div class="trust"><span>✓ Live in Tamil</span><span>✓ Lifetime Recordings</span><span>✓ Practice Files</span></div>
  </div>
  <div class="hero-card reveal excel-demo">
   <div class="excel-app">
-    <div class="excel-app-top"><span class="excel-app-icon">X</span><b>Sales Analysis.xlsx</b><i></i><i></i><i></i></div>
-    <div class="excel-tabs"><span>Home</span><span>Insert</span><span>Formulas</span><span>Data</span><span>PivotTable</span></div>
+    <div class="excel-app-top"><span class="excel-app-icon">X</span><b>Sales Analysis.xlsx</b><div class="window-controls"><i></i><i></i><i></i></div></div>
+    <div class="excel-tabs"><span>Home</span><span>Insert</span><span>Formulas</span><span>Data</span><span class="active-tab">PivotTable</span></div>
     <div class="demo-formula"><b>fx</b><span id="typedFormula"></span><i class="typing-cursor"></i></div>
     <div class="demo-stage">
       <div class="demo-sheet">
@@ -66,33 +84,71 @@
 <div class="scroll-cue" aria-hidden="true"><span></span>Scroll to explore</div>
 </section>
 
+<!-- Company Marquee (Social Proof) -->
+<div class="company-marquee">
+  <p>EXCEL SKILLS ARE TRUSTED BY TOP COMPANIES</p>
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span>TCS</span><span>Infosys</span><span>Cognizant</span><span>Zoho</span><span>Amazon</span><span>Accenture</span><span>HDFC Bank</span><span>Wipro</span>
+      <span>TCS</span><span>Infosys</span><span>Cognizant</span><span>Zoho</span><span>Amazon</span><span>Accenture</span><span>HDFC Bank</span><span>Wipro</span>
+    </div>
+  </div>
+</div>
+
 <section class="stats-wrap" id="about">
   <div class="stats-glow g1"></div><div class="stats-glow g2"></div>
   <div class="stats">
-    <div class="stat-card"><span class="stat-icon">⏱</span><b class="counter" data-target="20" data-suffix="+">0</b><small>Hours of Live Training</small><i></i></div>
-    <div class="stat-card"><span class="stat-icon">🗓</span><b class="counter" data-target="5">0</b><small>Weeks of Learning</small><i></i></div>
-    <div class="stat-card"><span class="stat-icon">💻</span><b class="counter" data-target="12">0</b><small>Interactive Live Days</small><i></i></div>
-    <div class="stat-card"><span class="stat-icon">தமிழ்</span><b class="counter" data-target="100" data-suffix="%">0</b><small>Learn Completely in Tamil</small><i></i></div>
+    <div class="stat-card"><span class="stat-icon">⏱</span><b class="counter" data-target="20" data-suffix="+">0</b><small>Hours of Live Training</small></div>
+    <div class="stat-card"><span class="stat-icon">🗓</span><b class="counter" data-target="5">0</b><small>Weeks of Learning</small></div>
+    <div class="stat-card"><span class="stat-icon">💻</span><b class="counter" data-target="12">0</b><small>Interactive Live Days</small></div>
+    <div class="stat-card"><span class="stat-icon">தமிழ்</span><b class="counter" data-target="100" data-suffix="%">0</b><small>Learn Completely in Tamil</small></div>
   </div>
   <div class="stats-bottom"><span>LIVE</span><p>Learn • Practice • Analyze • Build Dashboards</p><strong>Excel Career Masterclass</strong></div>
 </section>
 
-<section class="section why">
- <div class="section-title reveal why-title">
-      <span class="section-kicker">WHY THIS COURSE?</span>
-      <h2>Formula தெரிஞ்சா மட்டும் போதாது.<br><em>எங்கே, எப்படி Use பண்ணணும்னு தெரியணும்.</em></h2>
-      <p>Daily office work முதல் reporting &amp; analysis வரை — Excel-ஐ practical-ஆ, step-by-step கற்றுக்கொண்டு real-world tasks-ல் confident-ஆ use பண்ணுங்கள்.</p>
+<!-- Upgraded: Career Impact & Job Roles Section -->
+<section class="section career" id="career">
+  <div class="section-title reveal">
+    <span class="section-kicker">CAREER IMPACT</span>
+    <h2>Excel படிச்சா <em>என்ன வேலை கிடைக்கும்?</em></h2>
+    <p>Corporate உலகில் Data Handling மிக முக்கியம். Excel & Dashboards தெரிந்தால் இந்த High-Demand வேலைகளுக்கு நீங்கள் Apply செய்யலாம்.</p>
+  </div>
+  
+  <div class="career-grid">
+    <!-- Job Market Card with specific roles -->
+    <div class="career-card reveal">
+      <div class="career-icon">💼</div>
+      <h3>Top Excel Roles</h3>
+      <p>இந்த கோர்ஸ் முடித்ததும் நீங்கள் Apply செய்யக்கூடிய முக்கிய வேலைகள்:</p>
+      
+      <div class="job-roles-list">
+        <span>✅ MIS Executive / Manager</span>
+        <span>✅ Reporting Analyst</span>
+        <span>✅ Data Analyst</span>
+        <span>✅ Financial Analyst</span>
+        <span>✅ Business Analyst (BA)</span>
+        <span>✅ Operations Executive</span>
+        <span>✅ Backend / Data Operations</span>
+      </div>
+      
+      <div class="career-metric mt-20">
+        <b class="counter" data-target="50" data-suffix="K+">0</b>
+        <span>Active Jobs in India (Naukri/LinkedIn)</span>
+      </div>
     </div>
- <div class="cards">
-  <article class="feature reveal"><div>⚡</div><h3>Work Faster</h3><p>Manual work-ஐ குறைத்து formulas, smart tools மற்றும் techniques மூலம் productivity அதிகரிக்கவும்.</p></article>
-  <article class="feature reveal"><div>📊</div><h3>Analyze Better</h3><p>Raw data-வை meaningful reports, Pivot Tables, charts மற்றும் dashboards-ஆக மாற்றுங்கள்.</p></article>
-  <article class="feature reveal"><div>💼</div><h3>Career Ready</h3><p>Interview மற்றும் workplace-க்கு தேவையான practical Excel knowledge உடன் confidence build செய்யுங்கள்.</p></article>
- </div>
-</section>
-
-<section class="section audience">
- <div class="section-title reveal"><span>WHO CAN JOIN?</span><h2>இந்த Masterclass <em>யாருக்காக?</em></h2></div>
- <div class="pill-grid reveal"><span>🎓 Beginners</span><span>🧑‍🎓 College Students</span><span>🔍 Job Seekers</span><span>💻 Working Professionals</span><span>📑 MIS / Reporting Aspirants</span><span>🚀 Career Switchers</span></div>
+    
+    <!-- Salary Growth Card (Animated Graph) -->
+    <div class="career-card premium-glow reveal">
+      <div class="career-icon">📈</div>
+      <h3>Salary Potential</h3>
+      <p>Excel-ல் Data Reporting & Dashboards தெரிந்தால் Average Salary Growth அதிகம்.</p>
+      <div class="salary-graph">
+        <div class="bar-wrap"><div class="sal-bar b1"></div><span>Beginner<br>₹2.5L-4L</span></div>
+        <div class="bar-wrap"><div class="sal-bar b2"></div><span>Intermediate<br>₹4L-7L</span></div>
+        <div class="bar-wrap"><div class="sal-bar b3"></div><span class="highlight">Advanced<br>₹7L-12L+</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section curriculum" id="curriculum">
@@ -103,122 +159,221 @@
    <div class="learning-flow"><span>01 <b>Learn Basics</b></span><i>→</i><span>02 <b>Build Formulas</b></span><i>→</i><span>03 <b>Analyze Data</b></span><i>→</i><span>04 <b>Create Reports</b></span></div>
    <div class="curriculum-actions"><button class="btn pdf-btn disabled-link" type="button">📄 Course PDF <small>Coming Soon</small></button></div>
  </div>
- <div class="modules"><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">🟩</span>
-<span class="module-title-wrap"><strong>Getting Started with Excel</strong><em>Start with the Excel interface, workbook structure and everyday navigation.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>EXCEL SESSION</li><li><span class="topic-check">✓</span>Introduction of Microsoft Excel</li><li><span class="topic-check">✓</span>About Microsoft Excel</li><li><span class="topic-check">✓</span>Why Learn Excel</li><li><span class="topic-check">✓</span>Excel Fundamentals (or) Basic Terminology</li><li><span class="topic-check">✓</span>Understanding the Excel Worksheet</li><li><span class="topic-check">✓</span>Workbook vs Worksheet</li><li><span class="topic-check">✓</span>Excel File Formats</li><li><span class="topic-check">✓</span>Understanding of constant value and Cell Reference</li><li><span class="topic-check">✓</span>Cell Formatting</li><li><span class="topic-check">✓</span>What &amp; Why Cell formatting Important</li><li><span class="topic-check">✓</span>Types of Cell Formatting</li><li><span class="topic-check">✓</span>Format Painter, Wrap Text &amp; Merge Cells</li><li><span class="topic-check">✓</span>Name Manager, Remove Duplicates, Text To Columns</li><li><span class="topic-check">✓</span>Cell Reference ($ Dollar Symbol Usage)</li><li><span class="topic-check">✓</span>Types of Cell Reference</li><li><span class="topic-check">✓</span>Absolute, Relative, Mixed Cell Reference</li><li><span class="topic-check">✓</span>Impact of Absolute and Relative Cell Reference in Formulas</li><li><span class="topic-check">✓</span>Mixed Cells Reference – Single Dollar Tricks</li><li><span class="topic-check">✓</span>Sorting by Single Column</li><li><span class="topic-check">✓</span>Advance Sorting by Multiple Columns</li><li><span class="topic-check">✓</span>Working with Filter, Row, Column and Value fields</li><li><span class="topic-check">✓</span>Basic Graphs – Column, Bar, Line, Pie, Histogram &amp; Stacked</li><li><span class="topic-check">✓</span>Creating and Managing - Data Cards, Slicer and Graphs in Dashboard Sheet</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">🎨</span>
-<span class="module-title-wrap"><strong>Formatting &amp; Productivity</strong><em>Make worksheets clean, readable and faster to work with.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>Font Formatting</li><li><span class="topic-check">✓</span>Alignment &amp; Orientation</li><li><span class="topic-check">✓</span>Borders &amp; Colors</li><li><span class="topic-check">✓</span>Number Formatting</li><li><span class="topic-check">✓</span>FIND, SEARCH, REPT, SUBSTITUTE &amp; TRIM</li><li><span class="topic-check">✓</span>6 - INFORMATION Functions</li><li><span class="topic-check">✓</span>Flash Fill, Auto Fill, Find &amp; Replace</li><li><span class="topic-check">✓</span>Conditional Formatting</li><li><span class="topic-check">✓</span>Apply Condition Formatting for Number, Text &amp; Date</li><li><span class="topic-check">✓</span>Formatting data/Range as a TABLE</li><li><span class="topic-check">✓</span>Formatting a Pivot Table – Design View</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">➗</span>
-<span class="module-title-wrap"><strong>Formula Fundamentals</strong><em>Understand formula logic and build confidence with essential calculations.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>Creating Simple Formulae &amp; Working with Basic Functions</li><li><span class="topic-check">✓</span>Different Between Formula and Function</li><li><span class="topic-check">✓</span>Basic Function (Sum, Count, IF, Average, Min and Max)</li><li><span class="topic-check">✓</span>ROUND, ROUNDUP, ROUNDDOWN - BASIC</li><li><span class="topic-check">✓</span>SUM, SUMIF, SUMIFS, SUMPRODUCT - AGGREGATION</li><li><span class="topic-check">✓</span>SUBTOTAL (Sum, Count, Average, Min, Max)</li><li><span class="topic-check">✓</span>ISBLANK, ISERR, ISERROR, ISFORMULA</li><li><span class="topic-check">✓</span>COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS</li><li><span class="topic-check">✓</span>AVERAGE, AVERAGEIF, AVERAGEIFS</li><li><span class="topic-check">✓</span>MAX, MAXIF, MIN, MINIF</li><li><span class="topic-check">✓</span>Highlight TOP, BOTTOM and AVERAGE Items</li><li><span class="topic-check">✓</span>Different Aggregate functions</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">🧠</span>
-<span class="module-title-wrap"><strong>Logical &amp; Conditional Functions</strong><em>Build decision-making formulas for real office scenarios.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>Single and Multi-operations (Add, subtract, multiply and divide)</li><li><span class="topic-check">✓</span>Logical Operations (&gt;, &lt;, &gt;=, &lt;=, =, &lt;&gt; or =!)</li><li><span class="topic-check">✓</span>What is Syntax and Arguments</li><li><span class="topic-check">✓</span>IF - Basic</li><li><span class="topic-check">✓</span>Nested IF vs IFS (Advanced)</li><li><span class="topic-check">✓</span>Nested Logical Function IF WITH (AND, OR, NOT)</li><li><span class="topic-check">✓</span>RAND, RANDBETWEEN - RANDOM</li><li><span class="topic-check">✓</span>INDEX AND MATCH</li><li><span class="topic-check">✓</span>SORT, SORTBY, TRANSPOSE, UNIQUE</li><li><span class="topic-check">✓</span>4 - TEXT OR STRING Functions</li><li><span class="topic-check">✓</span>TEXTAFTER, TEXTBEFORE, TEXTJOIN, TEXTSPLIT - Advanced</li><li><span class="topic-check">✓</span>NETWORKDAYS &amp; NETWORKDAYS.INT</li><li><span class="topic-check">✓</span>WORKDAY AND WORKDAY.INT</li><li><span class="topic-check">✓</span>Handling Missing Data, Grouping Data</li><li><span class="topic-check">✓</span>Understanding Data Validation Settings</li><li><span class="topic-check">✓</span>Creating Error Alerts</li><li><span class="topic-check">✓</span>Creating and Managing Drop-Down List</li><li><span class="topic-check">✓</span>Sorting and Filtering Data</li><li><span class="topic-check">✓</span>Understanding Sorting</li><li><span class="topic-check">✓</span>Advanced Apply Multiple Filters and Clearing</li><li><span class="topic-check">✓</span>Data Bars, Color Scales &amp; Icon Set</li><li><span class="topic-check">✓</span>Working with TABLES</li><li><span class="topic-check">✓</span>Understanding &amp; Error Handling</li><li><span class="topic-check">✓</span>###ERROR, #SPILL</li><li><span class="topic-check">✓</span>Working with PIVOT TABLES</li><li><span class="topic-check">✓</span>Understanding Pivot Tables</li><li><span class="topic-check">✓</span>Things to Consider before creating Pivot Table</li><li><span class="topic-check">✓</span>Impact and understanding in Calculated Fields</li><li><span class="topic-check">✓</span>Sorting and Filtering values</li><li><span class="topic-check">✓</span>Auto Grouping and Customize Grouping the Fields</li><li><span class="topic-check">✓</span>Creating Multi Slicer and its connections</li><li><span class="topic-check">✓</span>Understanding Graph</li><li><span class="topic-check">✓</span>Things to Consider before creating Graph</li><li><span class="topic-check">✓</span>Creating and Managing Axes, Axis title &amp; Chart Titles</li><li><span class="topic-check">✓</span>Working with Data Labels, Data Table, Error Bars and Legends</li><li><span class="topic-check">✓</span>Inserting and Managing Sparklines</li><li><span class="topic-check">✓</span>Dashboard Creator Utilities</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">🔎</span>
-<span class="module-title-wrap"><strong>Lookup &amp; Reference Functions</strong><em>Find and connect information across tables and sheets.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>3 - LOOKUP &amp; REFERNECE Functions</li><li><span class="topic-check">✓</span>LOOKUP, VLOOKUP, HLOOKUP</li><li><span class="topic-check">✓</span>XLOOKUP - Advanced</li><li><span class="topic-check">✓</span>OFFSET, INDIRECT, CHOOSE</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">🔤</span>
-<span class="module-title-wrap"><strong>Text, Date &amp; Time Functions</strong><em>Clean text and handle dates and time efficiently.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>LOWER, PROPER, UPPER &amp; CONCAT</li><li><span class="topic-check">✓</span>LEFT, MID, RIGHT, EXACT &amp; LEN</li><li><span class="topic-check">✓</span>Usage of TEXT Function</li><li><span class="topic-check">✓</span>5 - DATE Functions</li><li><span class="topic-check">✓</span>DATE, DAYS, DAY, MONTH &amp; YEAR</li><li><span class="topic-check">✓</span>TODAY, NOW, WEEKNUM, WEEKDAY, EOMONTH &amp; EDATE</li><li><span class="topic-check">✓</span>ISNA, ISNONTEXT, ISNUMBER &amp; ISTEXT</li><li><span class="topic-check">✓</span>Timeline Slicers</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">🧹</span>
-<span class="module-title-wrap"><strong>Data Management &amp; Cleaning</strong><em>Prepare raw data for accurate reporting and analysis.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>FILTER, GETPIVOTDATA</li><li><span class="topic-check">✓</span>Data Validation</li><li><span class="topic-check">✓</span>What is Data Validation</li><li><span class="topic-check">✓</span>Apply Filter</li><li><span class="topic-check">✓</span>Usage of Tables</li><li><span class="topic-check">✓</span>Creating Pivot Table</li><li><span class="topic-check">✓</span>Analysis/Contribution Using Pivot table – Show Value as</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">✨</span>
-<span class="module-title-wrap"><strong>Pivot Tables &amp; Interactive Analysis</strong><em>Summarize large datasets and explore insights interactively.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>Create Calculated Fields</li><li><span class="topic-check">✓</span>Introduction to SLICER</li><li><span class="topic-check">✓</span>Slicer Designs</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">📊</span>
-<span class="module-title-wrap"><strong>Charts &amp; Dashboard Reporting</strong><em>Turn analysis into clear visual reports and dashboards.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>Data Visualization</li><li><span class="topic-check">✓</span>Chart Types</li><li><span class="topic-check">✓</span>Advanced Graphs - Scatter Plot, Tree Map, Waterfall Chart, Box Whisker &amp; Combo</li><li><span class="topic-check">✓</span>What is Dashboard</li><li><span class="topic-check">✓</span>Dashboard Project</li></ul></div></div>
-</article><article class="module reveal">
-<button class="module-head" aria-expanded="false">
-<span class="module-icon">📈</span>
-<span class="module-title-wrap"><strong>Excel Tools &amp; Advanced Techniques</strong><em>Explore additional Excel tools and techniques included in the masterclass.</em></span>
-<span class="module-toggle">+</span>
-</button>
-<div class="module-body"><div class="topic-panel"><ul><li><span class="topic-check">✓</span>Status</li><li><span class="topic-check">✓</span>Advantages Disadvantages</li><li><span class="topic-check">✓</span>Data Types</li><li><span class="topic-check">✓</span>Function List view</li><li><span class="topic-check">✓</span>Usage of FX</li><li><span class="topic-check">✓</span>Styles</li><li><span class="topic-check">✓</span>Function List</li><li><span class="topic-check">✓</span>1 - LOGICAL Functions</li><li><span class="topic-check">✓</span>TRUE, FALSE, SWITCH</li><li><span class="topic-check">✓</span>2 - MATH &amp; TRIG Functions</li><li><span class="topic-check">✓</span>ISEVEN, ISODD, ISLOGICAL &amp; ISREF</li><li><span class="topic-check">✓</span>7 - STATISTICAL Functions</li><li><span class="topic-check">✓</span>RANK, LARGE, SMALL</li><li><span class="topic-check">✓</span>Tips &amp; Tricks</li><li><span class="topic-check">✓</span>Providing Input Messages</li><li><span class="topic-check">✓</span>Dependent Drop-Down List</li><li><span class="topic-check">✓</span>Convert to Ranges</li><li><span class="topic-check">✓</span>#NA, #DIV/O, #NAME &amp; #NULL</li><li><span class="topic-check">✓</span>#NUM, #REF &amp; #VALUE</li></ul></div></div>
-</article></div>
-</section>
-
-<section class="section benefits" id="benefits">
- <div class="benefit-copy reveal"><span class="label">MORE THAN JUST CLASSES</span><h2>Course-உடன் கிடைக்கும்<br><em>Extra Benefits</em></h2><p>Learn பண்ணுவது மட்டும் இல்லாமல் தொடர்ந்து practice செய்து career-க்கு apply பண்ண தேவையான support.</p><a class="btn primary" href="#pricing">See Course Offer →</a></div>
- <div class="benefit-grid">
-   <article class="reveal"><b>∞</b><h3>Lifetime Recordings</h3><p>Class miss ஆனாலும் recording available. உங்கள் நேரத்தில் மீண்டும் பார்க்கலாம்.</p></article>
-   <article class="reveal"><b>📁</b><h3>Practice Files</h3><p>Hands-on learning-க்கு structured Excel practice files.</p></article>
-   <article class="reveal"><b>💬</b><h3>Doubt Support</h3><p>Learning journey-ல் வரும் doubts clear செய்ய dedicated support.</p></article>
-   <article class="reveal"><b>📄</b><h3>Resume Building</h3><p>Excel skills-ஐ resume-ல் professional-ஆ present செய்ய guidance.</p></article>
+ <div class="modules">
+   <!-- Module 1 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">🟩</span>
+      <span class="module-title-wrap"><strong>Getting Started with Excel</strong><em>Start with the Excel interface, workbook structure and everyday navigation.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>EXCEL SESSION</li><li><span class="topic-check">✓</span>Introduction of Microsoft Excel</li><li><span class="topic-check">✓</span>About Microsoft Excel</li><li><span class="topic-check">✓</span>Why Learn Excel</li><li><span class="topic-check">✓</span>Excel Fundamentals (or) Basic Terminology</li><li><span class="topic-check">✓</span>Understanding the Excel Worksheet</li><li><span class="topic-check">✓</span>Workbook vs Worksheet</li><li><span class="topic-check">✓</span>Excel File Formats</li><li><span class="topic-check">✓</span>Understanding of constant value and Cell Reference</li><li><span class="topic-check">✓</span>Cell Formatting</li><li><span class="topic-check">✓</span>What & Why Cell formatting Important</li><li><span class="topic-check">✓</span>Types of Cell Formatting</li><li><span class="topic-check">✓</span>Format Painter, Wrap Text & Merge Cells</li><li><span class="topic-check">✓</span>Name Manager, Remove Duplicates, Text To Columns</li><li><span class="topic-check">✓</span>Cell Reference ($ Dollar Symbol Usage)</li><li><span class="topic-check">✓</span>Types of Cell Reference</li><li><span class="topic-check">✓</span>Absolute, Relative, Mixed Cell Reference</li><li><span class="topic-check">✓</span>Impact of Absolute and Relative Cell Reference in Formulas</li><li><span class="topic-check">✓</span>Mixed Cells Reference – Single Dollar Tricks</li><li><span class="topic-check">✓</span>Sorting by Single Column</li><li><span class="topic-check">✓</span>Advance Sorting by Multiple Columns</li><li><span class="topic-check">✓</span>Working with Filter, Row, Column and Value fields</li><li><span class="topic-check">✓</span>Basic Graphs – Column, Bar, Line, Pie, Histogram & Stacked</li><li><span class="topic-check">✓</span>Creating and Managing - Data Cards, Slicer and Graphs in Dashboard Sheet</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 2 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">🎨</span>
+      <span class="module-title-wrap"><strong>Formatting & Productivity</strong><em>Make worksheets clean, readable and faster to work with.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>Font Formatting</li><li><span class="topic-check">✓</span>Alignment & Orientation</li><li><span class="topic-check">✓</span>Borders & Colors</li><li><span class="topic-check">✓</span>Number Formatting</li><li><span class="topic-check">✓</span>FIND, SEARCH, REPT, SUBSTITUTE & TRIM</li><li><span class="topic-check">✓</span>6 - INFORMATION Functions</li><li><span class="topic-check">✓</span>Flash Fill, Auto Fill, Find & Replace</li><li><span class="topic-check">✓</span>Conditional Formatting</li><li><span class="topic-check">✓</span>Apply Condition Formatting for Number, Text & Date</li><li><span class="topic-check">✓</span>Formatting data/Range as a TABLE</li><li><span class="topic-check">✓</span>Formatting a Pivot Table – Design View</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 3 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">➗</span>
+      <span class="module-title-wrap"><strong>Formula Fundamentals</strong><em>Understand formula logic and build confidence with essential calculations.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>Creating Simple Formulae & Working with Basic Functions</li><li><span class="topic-check">✓</span>Different Between Formula and Function</li><li><span class="topic-check">✓</span>Basic Function (Sum, Count, IF, Average, Min and Max)</li><li><span class="topic-check">✓</span>ROUND, ROUNDUP, ROUNDDOWN - BASIC</li><li><span class="topic-check">✓</span>SUM, SUMIF, SUMIFS, SUMPRODUCT - AGGREGATION</li><li><span class="topic-check">✓</span>SUBTOTAL (Sum, Count, Average, Min, Max)</li><li><span class="topic-check">✓</span>ISBLANK, ISERR, ISERROR, ISFORMULA</li><li><span class="topic-check">✓</span>COUNT, COUNTA, COUNTBLANK, COUNTIF, COUNTIFS</li><li><span class="topic-check">✓</span>AVERAGE, AVERAGEIF, AVERAGEIFS</li><li><span class="topic-check">✓</span>MAX, MAXIF, MIN, MINIF</li><li><span class="topic-check">✓</span>Highlight TOP, BOTTOM and AVERAGE Items</li><li><span class="topic-check">✓</span>Different Aggregate functions</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 4 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">🧠</span>
+      <span class="module-title-wrap"><strong>Logical & Conditional Functions</strong><em>Build decision-making formulas for real office scenarios.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>Single and Multi-operations (Add, subtract, multiply and divide)</li><li><span class="topic-check">✓</span>Logical Operations (>, <, >=, <=, =, <> or =!)</li><li><span class="topic-check">✓</span>What is Syntax and Arguments</li><li><span class="topic-check">✓</span>IF - Basic</li><li><span class="topic-check">✓</span>Nested IF vs IFS (Advanced)</li><li><span class="topic-check">✓</span>Nested Logical Function IF WITH (AND, OR, NOT)</li><li><span class="topic-check">✓</span>RAND, RANDBETWEEN - RANDOM</li><li><span class="topic-check">✓</span>INDEX AND MATCH</li><li><span class="topic-check">✓</span>SORT, SORTBY, TRANSPOSE, UNIQUE</li><li><span class="topic-check">✓</span>4 - TEXT OR STRING Functions</li><li><span class="topic-check">✓</span>TEXTAFTER, TEXTBEFORE, TEXTJOIN, TEXTSPLIT - Advanced</li><li><span class="topic-check">✓</span>NETWORKDAYS & NETWORKDAYS.INT</li><li><span class="topic-check">✓</span>WORKDAY AND WORKDAY.INT</li><li><span class="topic-check">✓</span>Handling Missing Data, Grouping Data</li><li><span class="topic-check">✓</span>Understanding Data Validation Settings</li><li><span class="topic-check">✓</span>Creating Error Alerts</li><li><span class="topic-check">✓</span>Creating and Managing Drop-Down List</li><li><span class="topic-check">✓</span>Sorting and Filtering Data</li><li><span class="topic-check">✓</span>Understanding Sorting</li><li><span class="topic-check">✓</span>Advanced Apply Multiple Filters and Clearing</li><li><span class="topic-check">✓</span>Data Bars, Color Scales & Icon Set</li><li><span class="topic-check">✓</span>Working with TABLES</li><li><span class="topic-check">✓</span>Understanding & Error Handling</li><li><span class="topic-check">✓</span>###ERROR, #SPILL</li><li><span class="topic-check">✓</span>Working with PIVOT TABLES</li><li><span class="topic-check">✓</span>Understanding Pivot Tables</li><li><span class="topic-check">✓</span>Things to Consider before creating Pivot Table</li><li><span class="topic-check">✓</span>Impact and understanding in Calculated Fields</li><li><span class="topic-check">✓</span>Sorting and Filtering values</li><li><span class="topic-check">✓</span>Auto Grouping and Customize Grouping the Fields</li><li><span class="topic-check">✓</span>Creating Multi Slicer and its connections</li><li><span class="topic-check">✓</span>Understanding Graph</li><li><span class="topic-check">✓</span>Things to Consider before creating Graph</li><li><span class="topic-check">✓</span>Creating and Managing Axes, Axis title & Chart Titles</li><li><span class="topic-check">✓</span>Working with Data Labels, Data Table, Error Bars and Legends</li><li><span class="topic-check">✓</span>Inserting and Managing Sparklines</li><li><span class="topic-check">✓</span>Dashboard Creator Utilities</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 5 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">🔎</span>
+      <span class="module-title-wrap"><strong>Lookup & Reference Functions</strong><em>Find and connect information across tables and sheets.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>3 - LOOKUP & REFERNECE Functions</li><li><span class="topic-check">✓</span>LOOKUP, VLOOKUP, HLOOKUP</li><li><span class="topic-check">✓</span>XLOOKUP - Advanced</li><li><span class="topic-check">✓</span>OFFSET, INDIRECT, CHOOSE</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 6 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">🔤</span>
+      <span class="module-title-wrap"><strong>Text, Date & Time Functions</strong><em>Clean text and handle dates and time efficiently.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>LOWER, PROPER, UPPER & CONCAT</li><li><span class="topic-check">✓</span>LEFT, MID, RIGHT, EXACT & LEN</li><li><span class="topic-check">✓</span>Usage of TEXT Function</li><li><span class="topic-check">✓</span>5 - DATE Functions</li><li><span class="topic-check">✓</span>DATE, DAYS, DAY, MONTH & YEAR</li><li><span class="topic-check">✓</span>TODAY, NOW, WEEKNUM, WEEKDAY, EOMONTH & EDATE</li><li><span class="topic-check">✓</span>ISNA, ISNONTEXT, ISNUMBER & ISTEXT</li><li><span class="topic-check">✓</span>Timeline Slicers</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 7 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">🧹</span>
+      <span class="module-title-wrap"><strong>Data Management & Cleaning</strong><em>Prepare raw data for accurate reporting and analysis.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>FILTER, GETPIVOTDATA</li><li><span class="topic-check">✓</span>Data Validation</li><li><span class="topic-check">✓</span>What is Data Validation</li><li><span class="topic-check">✓</span>Apply Filter</li><li><span class="topic-check">✓</span>Usage of Tables</li><li><span class="topic-check">✓</span>Creating Pivot Table</li><li><span class="topic-check">✓</span>Analysis/Contribution Using Pivot table – Show Value as</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 8 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">✨</span>
+      <span class="module-title-wrap"><strong>Pivot Tables & Interactive Analysis</strong><em>Summarize large datasets and explore insights interactively.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>Create Calculated Fields</li><li><span class="topic-check">✓</span>Introduction to SLICER</li><li><span class="topic-check">✓</span>Slicer Designs</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 9 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">📊</span>
+      <span class="module-title-wrap"><strong>Charts & Dashboard Reporting</strong><em>Turn analysis into clear visual reports and dashboards.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>Data Visualization</li><li><span class="topic-check">✓</span>Chart Types</li><li><span class="topic-check">✓</span>Advanced Graphs - Scatter Plot, Tree Map, Waterfall Chart, Box Whisker & Combo</li><li><span class="topic-check">✓</span>What is Dashboard</li><li><span class="topic-check">✓</span>Dashboard Project</li>
+      </ul></div></div>
+   </article>
+   <!-- Module 10 -->
+   <article class="module reveal">
+      <button class="module-head" aria-expanded="false">
+      <span class="module-icon">📈</span>
+      <span class="module-title-wrap"><strong>Excel Tools & Advanced Techniques</strong><em>Explore additional Excel tools and techniques.</em></span>
+      <span class="module-toggle">+</span>
+      </button>
+      <div class="module-body"><div class="topic-panel"><ul>
+        <li><span class="topic-check">✓</span>Status</li><li><span class="topic-check">✓</span>Advantages Disadvantages</li><li><span class="topic-check">✓</span>Data Types</li><li><span class="topic-check">✓</span>Function List view</li><li><span class="topic-check">✓</span>Usage of FX</li><li><span class="topic-check">✓</span>Styles</li><li><span class="topic-check">✓</span>Function List</li><li><span class="topic-check">✓</span>1 - LOGICAL Functions</li><li><span class="topic-check">✓</span>TRUE, FALSE, SWITCH</li><li><span class="topic-check">✓</span>2 - MATH & TRIG Functions</li><li><span class="topic-check">✓</span>ISEVEN, ISODD, ISLOGICAL & ISREF</li><li><span class="topic-check">✓</span>7 - STATISTICAL Functions</li><li><span class="topic-check">✓</span>RANK, LARGE, SMALL</li><li><span class="topic-check">✓</span>Tips & Tricks</li><li><span class="topic-check">✓</span>Providing Input Messages</li><li><span class="topic-check">✓</span>Dependent Drop-Down List</li><li><span class="topic-check">✓</span>Convert to Ranges</li><li><span class="topic-check">✓</span>#NA, #DIV/O, #NAME & #NULL</li><li><span class="topic-check">✓</span>#NUM, #REF & #VALUE</li>
+      </ul></div></div>
+   </article>
  </div>
 </section>
 
-<section class="section schedule">
+<!-- Upgraded: Benefits Section (Expanded to 6 Items with 1000+ Templates) -->
+<section class="section benefits" id="benefits">
+ <div class="benefit-copy reveal">
+   <span class="label">EXTRA VALUE BUNDLE</span>
+   <h2>Course-உடன் கிடைக்கும்<br><em>Mega Benefits</em></h2>
+   <p>வெறுமனே Course மட்டுமில்லாமல், உங்கள் Career & Interview-க்கு பயன்படும் 6 Premium Bonuses.</p>
+   <a class="btn primary magnetic" href="#pricing">See Course Offer →</a>
+ </div>
+ <div class="benefit-grid six-grid">
+   <article class="reveal"><b>∞</b><h3>Lifetime Recordings</h3><p>Class miss ஆனாலும் recording available. எப்போது வேண்டுமானாலும் Revision செய்யலாம்.</p></article>
+   <article class="reveal"><b>📑</b><h3>1000+ Excel Templates</h3><p>Office work-ஐ சுலபமாக்க Readymade Invoice, Trackers, Dashboards & Report Templates.</p></article>
+   <article class="reveal"><b>📁</b><h3>Practice Datasets</h3><p>Hands-on learning-க்கு Real-world structured Excel practice files & projects.</p></article>
+   <article class="reveal"><b>🎤</b><h3>Interview Top Q&A</h3><p>MNC கம்பெனிகளில் கேட்கப்படும் Top 50+ Excel Interview Questions & Answers PDF.</p></article>
+   <article class="reveal"><b>🎓</b><h3>Course Certificate</h3><p>உங்கள் Resume-க்கு Value சேர்க்கும் Course Completion Certificate வழங்கப்படும்.</p></article>
+   <article class="reveal"><b>💬</b><h3>VIP Doubt Support</h3><p>WhatsApp Community Access. எப்போது வேண்டுமானாலும் உங்கள் Doubts clear செய்யலாம்.</p></article>
+ </div>
+</section>
+
+<section class="section schedule" id="schedule">
  <div class="schedule-card reveal">
   <div><span>🗓️ LIVE CLASS SCHEDULE</span><h2>Weekend-ல் Learn பண்ணுங்க.<br>Week முழுக்க Practice பண்ணுங்க.</h2></div>
   <div class="schedule-info"><p><small>CLASS DAYS</small><b>Weekend</b></p><p><small>TIME</small><b>5:00 PM – 7:00 PM</b></p><p><small>DURATION</small><b>5 Weeks • 12 Days</b></p><p><small>MODE</small><b>Live Online + Recording</b></p></div>
  </div>
 </section>
 
-<section class="section trainer">
- <div class="trainer-card reveal">
-  <div class="trainer-avatar">P</div>
-  <div><span>YOUR TRAINER</span><h2>Learn with <em>Purushoth</em></h2><p>DATA WITH MAARI மூலம் practical, easy-to-understand Tamil learning experience. Excel concepts-ஐ real-world usage-க்கு connect செய்து கற்றுக்கொள்ளுங்கள்.</p><div class="socials"><a href="https://www.youtube.com/@datawithmaari" target="_blank">YouTube</a><a href="https://www.instagram.com/data_with_maari" target="_blank">Instagram</a><a href="https://www.linkedin.com/in/purushoth-m-2b593820b/" target="_blank">LinkedIn</a></div></div>
- </div>
+<section class="section trainer" id="trainer">
+    <div class="trainer-card reveal">
+        <div class="trainer-avatar">P<span class="verified-badge">✔ Verified</span></div>
+        <div class="trainer-content">
+            <span class="trainer-label">YOUR TRAINER</span>
+            <h2>Learn with <em>Purushoth</em></h2>
+            <p>DATA WITH MAARI மூலம் practical, easy-to-understand Tamil learning experience. Excel concepts-ஐ real-world usage-க்கு connect செய்து கற்றுக்கொள்ளுங்கள்.</p>
+            <div class="trainer-highlights">
+                <span>💼 5+ Years Experience</span>
+                <span>📊 MIS Reporting</span>
+                <span>📈 Power BI</span>
+                <span>🤖 AI Automation</span>
+            </div>
+            <div class="socials">
+                <a href="https://www.youtube.com/@datawithmaari" target="_blank" class="magnetic">YouTube</a>
+                <a href="https://www.instagram.com/data_with_maari" target="_blank" class="magnetic">Instagram</a>
+                <a href="https://www.linkedin.com/in/purushoth-m-2b593820b/" target="_blank" class="magnetic">LinkedIn</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="section pricing" id="pricing">
  <div class="section-title reveal"><span>ENROLL TODAY</span><h2>உங்கள் Excel Journey-ஐ<br><em>இன்றே Start பண்ணுங்க.</em></h2></div>
- <div class="price-card reveal">
+ <div class="price-card reveal premium-glow">
    <div class="popular">🔥 SPECIAL MASTERCLASS FEE</div>
-   <img src="assets/logo.jpg" alt="DATA WITH MAARI">
+   <img src="assets/logo.jpg" alt="DATA WITH MAARI" onerror="this.src='https://placehold.co/70/0a9f55/white?text=DM'">
    <h3>Excel Basic to Advanced<br>Live Masterclass</h3>
+   
+   <div class="urgency-wrap">
+     <div class="urgency-text"><span>Seats Filling Fast!</span><b id="seats-left">Only 8 Seats Left</b></div>
+     <div class="urgency-bar"><div class="urgency-fill"></div></div>
+   </div>
+
    <div class="price"><small>COURSE FEE</small><strong>₹1,299</strong><span>Only</span></div>
-   <ul><li>✓ 20+ Hours Live Training</li><li>✓ 5 Weeks • 12 Days</li><li>✓ Tamil Language</li><li>✓ Lifetime Class Recordings</li><li>✓ Practice Files & Doubt Support</li><li>✓ Resume Building Guidance</li></ul>
-   <a class="btn primary full" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Register Now →</a>
+   <ul>
+     <li>✓ 20+ Hours Live Training</li>
+     <li>✓ 1000+ Premium Excel Templates</li>
+     <li>✓ Interview Q&A & Certificate</li>
+     <li>✓ Lifetime Class Recordings</li>
+   </ul>
+   <a class="btn primary full magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Register Now →</a>
    <p class="secure">🔒 Secure enrollment • Limited seats</p>
  </div>
 </section>
 
+<!-- Upgraded: Payment Section with Direct App Links -->
 <section class="section payment" id="payment">
  <div class="payment-card reveal">
-  <div class="pay-copy"><span>STEP 2 • PAYMENT</span><h2>Pay via any <em>UPI App</em></h2><p>Registration form submit செய்த பிறகு ₹1,299 course fee-ஐ QR scan செய்து அல்லது UPI ID மூலம் செலுத்தலாம்.</p>
-  <div class="upi"><small>UPI ID</small><b id="upi">sandypurushoth123@okhdfcbank</b><button id="copyUpi">Copy</button></div>
-  <a class="btn whatsapp" href="https://wa.me/918124492673?text=Hi%20Purushoth%2C%20I%20have%20registered%20for%20the%20Excel%20Basic%20to%20Advanced%20Live%20Masterclass.%20I%20would%20like%20to%20share%20my%20payment%20confirmation." target="_blank" rel="noopener">Send Payment Confirmation on WhatsApp →</a></div>
-  <div class="qr-wrap"><img src="assets/payment-qr.png" alt="UPI payment QR code"><p>Scan & Pay ₹1,299</p></div>
+  <div class="pay-copy">
+    <span>STEP 2 • PAYMENT</span>
+    <h2>Pay Direct via <em>Any App</em></h2>
+    <p>Mobile-ல் இருப்பவர்கள் கீழே உள்ள பட்டனை கிளிக் செய்து GPay, PhonePe அல்லது Paytm மூலம் நேரடியாக Payment செய்யலாம்.</p>
+    
+    <!-- Deep Link Buttons -->
+    <div class="direct-pay-apps">
+      <!-- UPI URI format: upi://pay?pa=UPI_ID&pn=NAME&cu=INR -->
+      <a href="upi://pay?pa=sandypurushoth123@okhdfcbank&pn=DATA%20WITH%20MAARI&cu=INR" class="app-btn gpay magnetic">
+        <span class="app-icon">G</span> Pay
+      </a>
+      <a href="upi://pay?pa=sandypurushoth123@okhdfcbank&pn=DATA%20WITH%20MAARI&cu=INR" class="app-btn phonepe magnetic">
+        <span class="app-icon">पे</span> PhonePe
+      </a>
+      <a href="upi://pay?pa=sandypurushoth123@okhdfcbank&pn=DATA%20WITH%20MAARI&cu=INR" class="app-btn paytm magnetic">
+        Paytm
+      </a>
+    </div>
+
+    <div class="upi"><small>OR COPY UPI ID</small><b id="upi">sandypurushoth123@okhdfcbank</b><button id="copyUpi">Copy</button></div>
+    <a class="btn whatsapp magnetic" href="https://wa.me/918124492673?text=Hi%20Purushoth%2C%20I%20have%20registered%20for%20the%20Excel%20Basic%20to%20Advanced%20Live%20Masterclass.%20I%20would%20like%20to%20share%20my%20payment%20confirmation." target="_blank" rel="noopener">Send Payment Screenshot on WhatsApp →</a>
+  </div>
+  
+  <div class="qr-wrap">
+    <img src="assets/payment-qr.png" alt="UPI payment QR code" onerror="this.src='https://placehold.co/310x310/f0f8f4/0a9f55?text=QR+Code'">
+    <p>Scan & Pay ₹1,299</p>
+  </div>
  </div>
 </section>
 
@@ -228,26 +383,30 @@
   <article><button>இந்த course beginners-க்கு suitable-ஆ? <b>+</b></button><div><p>ஆம். Excel experience இல்லாத beginners முதல் existing skills upgrade செய்ய விரும்புபவர்கள் வரை join செய்யலாம்.</p></div></article>
   <article><button>Class miss ஆனால் என்ன செய்வது? <b>+</b></button><div><p>Class recording available இருக்கும். Miss ஆன session-ஐ பின்னர் பார்க்கலாம்.</p></div></article>
   <article><button>Course எந்த language-ல் நடக்கும்? <b>+</b></button><div><p>Course Tamil-ல் explain செய்யப்படும்; Excel technical terms தேவையான இடங்களில் English-ல் பயன்படுத்தப்படும்.</p></div></article>
-  <article><button>Practice files கிடைக்குமா? <b>+</b></button><div><p>ஆம். Course practice-க்கு தேவையான Excel files வழங்கப்படும்.</p></div></article>
+  <article><button>Practice files கிடைக்குமா? <b>+</b></button><div><p>ஆம். Course practice-க்கு தேவையான Excel files மற்றும் 1000+ templates வழங்கப்படும்.</p></div></article>
   <article><button>Class timing என்ன? <b>+</b></button><div><p>Weekend sessions மாலை 5:00 PM முதல் 7:00 PM வரை திட்டமிடப்பட்டுள்ளது.</p></div></article>
-  <article><button>எப்படி enroll செய்வது? <b>+</b></button><div><p>Register Now button மூலம் form submit செய்து, UPI payment complete செய்து WhatsApp-ல் confirmation share செய்யலாம்.</p></div></article>
+  <article><button>எப்படி enroll செய்வது? <b>+</b></button><div><p>Register Now button மூலம் form submit செய்து, GPay/PhonePe App லிங்க் கிளிக் செய்து Pay பண்ணிட்டு WhatsApp-ல் confirmation share செய்யலாம்.</p></div></article>
  </div>
 </section>
 
-<section class="final-cta">
- <img src="assets/logo.png" alt="DATA WITH MAARI">
- <span>READY TO LEVEL UP?</span><h2>Excel-ஐ உங்கள் <em>Career Skill</em> ஆக மாற்றுங்கள்.</h2><p>20+ hours • Live Tamil Training • Weekend Classes • Lifetime Recordings</p>
- <a class="btn light" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Enroll for ₹1,299 →</a>
+<section class="final-cta reveal">
+ <img src="assets/logo.png" alt="DATA WITH MAARI" onerror="this.src='https://placehold.co/80/0a9f55/white?text=DM'">
+ <span>READY TO LEVEL UP?</span><h2>Excel-ஐ உங்கள் <em>Career Skill</em> ஆக மாற்றுங்கள்.</h2><p>20+ hours • Live Tamil Training • 1000+ Templates • Lifetime Recordings</p>
+ <a class="btn light magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSekaj7F7vB5l-DqoQ8Wjp3jb_9O_GfPu3_NyYtpWtEO3yJGqg/viewform?usp=publish-editor" target="_blank" rel="noopener">Enroll for ₹1,299 →</a>
 </section>
 </main>
 
 <footer>
- <div class="footer-brand"><img src="assets/logo.png" alt="DATA WITH MAARI"><div><b>DATA WITH MAARI</b><p>Learn Data. Build Skills. Grow Your Career.</p></div></div>
+ <div class="footer-brand"><img src="assets/logo.png" alt="DATA WITH MAARI" onerror="this.src='https://placehold.co/55/0a9f55/white?text=DM'"><div><b>DATA WITH MAARI</b><p>Learn Data. Build Skills. Grow Your Career.</p></div></div>
  <div><b>Quick Links</b><a href="#curriculum">Curriculum</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
  <div><b>Contact</b><a href="mailto:datawithmaari@gmail.com">datawithmaari@gmail.com</a><a href="https://wa.me/918124492673" target="_blank">WhatsApp: +91 81244 92673</a></div>
  <p class="copyright">© <span id="year"></span> DATA WITH MAARI. All rights reserved.</p>
 </footer>
-<a class="wa-float" href="https://wa.me/918124492673?text=Hi%20Purushoth%2C%20I%20want%20to%20know%20more%20about%20the%20Excel%20Live%20Masterclass." target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- Floating Toast Notification (Hidden by default) -->
+<div id="toast" class="toast">UPI ID Copied Successfully! ✓</div>
+
+<a class="wa-float magnetic" href="https://wa.me/918124492673?text=Hi%20Purushoth%2C%20I%20want%20to%20know%20more%20about%20the%20Excel%20Live%20Masterclass." target="_blank" aria-label="Chat on WhatsApp">💬</a>
 <script src="script.js"></script>
 </body>
 </html>
