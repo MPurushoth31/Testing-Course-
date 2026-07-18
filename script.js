@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Mobile Menu Toggle
     const menu = document.querySelector(".menu");
-    const navMenu = document.querySelector(".nav nav");
+    const navMenu = document.querySelector(".nav-menu"); // Updated class
     const navbar = document.querySelector(".nav");
 
     menu.addEventListener("click", () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle("menu-open");
     });
 
-    document.querySelectorAll(".nav nav a").forEach(link => {
+    document.querySelectorAll(".nav-menu a").forEach(link => {
         link.addEventListener("click", () => {
             navMenu.classList.remove("open");
             menu.classList.remove("active");
@@ -22,27 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Smart Navbar Scroll & ScrollSpy
     let lastScroll = 0;
     const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav nav a[href^='#']");
+    const navLinks = document.querySelectorAll(".nav-menu a[href^='#']");
 
     window.addEventListener("scroll", () => {
         const current = window.scrollY;
         
-        // Glass effect
         if (current > 25) {
             navbar.classList.add("nav-scrolled");
         } else {
             navbar.classList.remove("nav-scrolled");
         }
         
-        // Hide on scroll down, show on scroll up
-        if (current > 120 && current > lastScroll) {
+        if (current > 120 && current > lastScroll && !navMenu.classList.contains('open')) {
             navbar.classList.add("nav-hidden");
         } else {
             navbar.classList.remove("nav-hidden");
         }
         lastScroll = current;
 
-        // ScrollSpy (Active link highlight)
+        // ScrollSpy
         let currentSection = "";
         sections.forEach(section => {
             if (current + 180 >= section.offsetTop) {
@@ -68,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // 4. Curriculum Modules Accordion
+    // 4. Curriculum Accordion
     document.querySelectorAll('.module-head').forEach(btn => {
         btn.addEventListener('click', () => {
             const m = btn.parentElement;
@@ -87,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Copy UPI ID with Toast Notification
+    // 6. Copy UPI ID with Toast
     const copyBtn = document.getElementById('copyUpi');
     const toast = document.getElementById('toast');
     
@@ -98,23 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 await navigator.clipboard.writeText(upiText);
                 this.textContent = 'Copied ✓';
                 
-                // Show Premium Toast Notification
                 toast.classList.add('show');
                 setTimeout(() => {
                     toast.classList.remove('show');
                     this.textContent = 'Copy';
                 }, 3000);
-                
             } catch (err) {
                 console.error('Failed to copy', err);
             }
         });
     }
 
-    // 7. Prevent default on payment buttons if on Desktop (Optional Enhancement)
+    // 7. Prevent Deep Links on Desktop
     document.querySelectorAll('.app-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
-            // Check if device is desktop
             if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 e.preventDefault();
                 alert("Please scan the QR code to pay on Desktop. Direct App links work on Mobile phones.");
@@ -122,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 8. Auto-typing Excel Formula Demo
+    // 8. Auto-typing Demo
     const demoSteps = [
         { formula: '=SUM(D2:D5)', status: 'Calculating Formulas...' },
         { formula: '=XLOOKUP("Laptop",B2:B5,D2:D5)', status: 'Analyzing with Pivot Table...' },
@@ -182,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelectorAll('.counter').forEach(counter => countObserver.observe(counter));
 
-    // 10. Premium Magnetic Button Effect (Mouse tracking on buttons)
+    // 10. Magnetic Effect
     if (window.innerWidth > 900) {
         const magneticElements = document.querySelectorAll('.magnetic');
         magneticElements.forEach((el) => {
@@ -200,23 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 11. Ripple Feedback Effect
-    document.querySelectorAll('.btn, .app-btn, .module-head, .faq-list button, .socials a, .nav a, .stat-card').forEach(el => {
-        el.classList.add('ripple-ready');
-        el.addEventListener('click', function(e) {
-            const r = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            r.className = 'click-ripple';
-            r.style.width = r.style.height = size + 'px';
-            r.style.left = (e.clientX - rect.left - size / 2) + 'px';
-            r.style.top = (e.clientY - rect.top - size / 2) + 'px';
-            this.appendChild(r);
-            setTimeout(() => r.remove(), 600);
-        });
-    });
-
-    // 12. Mouse Tilt Effect for Excel window
+    // 11. Mouse Tilt Effect for Excel window
     if (window.innerWidth > 900) {
         const excelApp = document.querySelector(".excel-app");
         if(excelApp) {
@@ -234,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 13. Fake Urgency Countdown (Simulate seats filling up)
+    // 12. Fake Urgency Countdown
     const seatsText = document.getElementById('seats-left');
     if (seatsText) {
         setTimeout(() => {
@@ -245,8 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 8000);
     }
 
-    // Set dynamic year in footer
+    // Set dynamic year
     const yearEl = document.getElementById('year');
     if(yearEl) yearEl.textContent = new Date().getFullYear();
-
 });
