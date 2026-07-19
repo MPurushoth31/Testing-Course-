@@ -28,10 +28,11 @@ a { text-decoration: none; color: inherit; }
 .nav-cta { background: linear-gradient(135deg, #08a65b, #087d49); color: white !important; padding: 12px 24px; border-radius: 12px; box-shadow: 0 10px 25px rgba(10, 163, 91, 0.3); transition: 0.3s; }
 .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 15px 35px rgba(10, 163, 91, 0.4); }
 
+/* PERFECTED MOBILE MENU BUTTON & LOGIC */
 .menu { display: none; border: 0; background: none; width: 30px; height: 24px; position: relative; cursor: pointer; z-index: 100000; }
 .menu span { display: block; position: absolute; height: 3px; width: 100%; background: #10231b; border-radius: 3px; transition: 0.3s; }
 .menu span:nth-child(1) { top: 0; } .menu span:nth-child(2) { top: 10px; } .menu span:nth-child(3) { top: 20px; }
-.menu.active span { background: #ffffff !important; }
+.menu.active span { background: #ffffff !important; } /* Forces white color on dark overlay */
 .menu.active span:nth-child(1) { top: 10px; transform: rotate(45deg); }
 .menu.active span:nth-child(2) { opacity: 0; }
 .menu.active span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
@@ -81,7 +82,7 @@ a { text-decoration: none; color: inherit; }
 .trust { display: flex; flex-wrap: wrap; gap: 15px; font-size: 13px; font-weight: 700; color: #52645d; }
 .trust span { padding: 10px 16px; border-radius: 50px; background: rgba(255,255,255,0.7); border: 1px solid rgba(9, 160, 86, 0.15); }
 
-/* VIBRANT & COLORFUL Excel Animation */
+/* Excel Window Animation */
 .excel-demo { position: relative; perspective: 1200px; }
 .excel-app { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(255,255,255,0.8); border-radius: 22px; overflow: hidden; box-shadow: 0 35px 90px rgba(5, 64, 37, 0.15); backdrop-filter: blur(20px); transform: rotateY(-4deg) rotateX(4deg); transition: transform 0.4s ease; animation: floatExcel 6s ease-in-out infinite; }
 .excel-demo:hover .excel-app { transform: rotateY(0) rotateX(0) translateY(-10px); }
@@ -95,52 +96,32 @@ a { text-decoration: none; color: inherit; }
 .demo-formula { padding: 10px 16px; background: #f9fcfb; border-bottom: 1px solid #e2ebe6; font-size: 12px; font-family: monospace; display: flex; align-items: center; gap: 10px; }
 .demo-formula b { color: var(--green); font-style: italic; }
 .demo-stage { height: 280px; position: relative; background: #fff; overflow: hidden; }
-
-/* Added Scanning Laser for Dynamic Effect */
-.scanner-line { position: absolute; left: 0; right: 0; height: 2px; background: #23e08b; box-shadow: 0 0 15px #23e08b, 0 0 30px #23e08b; z-index: 10; animation: scanData 4s linear infinite; pointer-events: none; }
-@keyframes scanData { 0% { top: 20px; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 250px; opacity: 0; } }
-
 .demo-sheet { padding: 15px; background-image: linear-gradient(#e5eee9 1px, transparent 1px), linear-gradient(90deg, #e5eee9 1px, transparent 1px); background-size: 25% 34px; }
 .sheet-row { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; height: 34px; font-size: 11px; color: #496258; }
 .sheet-row.header { background: #107c41; color: white; font-weight: 800; padding: 0 8px; }
 .sheet-row.data { background: rgba(255,255,255,0.9); padding: 0 8px; }
-.active-cell { position: absolute; width: 25%; height: 34px; left: 75%; top: 49px; border: 2px solid #ff007b; box-shadow: 0 0 14px rgba(255,0,123,0.4); animation: cellMove 3s infinite; }
-@keyframes cellMove { 33% { top: 83px; border-color: #00e1ff; box-shadow: 0 0 14px rgba(0,225,255,0.4); } 66% { top: 117px; border-color: #10b866; box-shadow: 0 0 14px rgba(16,184,102,0.4); } 100% { top: 151px; } }
+.active-cell { position: absolute; width: 25%; height: 34px; left: 75%; top: 49px; border: 2px solid #10b866; box-shadow: 0 0 14px rgba(16,184,102,0.35); animation: cellMove 3s infinite; }
+@keyframes cellMove { 33% { top: 83px; } 66% { top: 117px; } 100% { top: 151px; } }
 .demo-pivot, .demo-chart { position: absolute; inset: 20px; background: white; border-radius: 14px; padding: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); opacity: 0; }
 .demo-pivot { animation: pivotShow 12s infinite; } .demo-chart { animation: chartShow 12s infinite; }
 @keyframes pivotShow { 30%, 60% { opacity: 1; z-index: 10; } 0%, 25%, 65%, 100% { opacity: 0; z-index: -1; } }
 @keyframes chartShow { 65%, 95% { opacity: 1; z-index: 10; } 0%, 60%, 100% { opacity: 0; z-index: -1; } }
-
-/* Beautiful Gradients for Chart Bars */
 .bars { height: 180px; display: flex; align-items: flex-end; gap: 15px; padding-top: 20px; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
-.bars i { flex: 1; height: var(--h); border-radius: 5px 5px 0 0; }
-.colorful-bars i:nth-child(1) { background: linear-gradient(180deg, #ff416c, #ff4b2b); }
-.colorful-bars i:nth-child(2) { background: linear-gradient(180deg, #36d1dc, #5b86e5); }
-.colorful-bars i:nth-child(3) { background: linear-gradient(180deg, #fceabb, #f8b500); }
-.colorful-bars i:nth-child(4) { background: linear-gradient(180deg, #11998e, #38ef7d); }
-.colorful-bars i:nth-child(5) { background: linear-gradient(180deg, #8e2de2, #4a00e0); }
-
+.bars i { flex: 1; height: var(--h); background: linear-gradient(180deg, #24e58c, #087e49); border-radius: 5px 5px 0 0; }
 .demo-status { height: 32px; background: #087d49; color: white; display: flex; align-items: center; gap: 10px; padding: 0 16px; font-size: 10px; }
 .status-dot { width: 8px; height: 8px; background: #65ffae; border-radius: 50%; box-shadow: 0 0 10px #65ffae; animation: pulse 1s infinite; }
-
-/* Neon Glow Badges */
-.neon-badge { position: absolute; padding: 10px 18px; border-radius: 12px; font-size: 11px; backdrop-filter: blur(10px); z-index: 5; animation: badgeFloat 4s ease-in-out infinite; color: white; }
-.badge-formula { top: 15%; left: -30px; background: rgba(0, 50, 100, 0.9); border: 1px solid rgba(68, 184, 255, 0.5); box-shadow: 0 10px 25px rgba(0,0,0,0.2), 0 0 20px rgba(68,184,255,0.4); color: #80d4ff; }
-.badge-formula b { color: white; }
-.badge-pivot { bottom: 25%; right: -25px; animation-delay: 1s; background: rgba(80, 0, 50, 0.9); border: 1px solid rgba(255, 119, 200, 0.5); box-shadow: 0 10px 25px rgba(0,0,0,0.2), 0 0 20px rgba(255,119,200,0.4); color: #ffb3e1; }
-.badge-pivot b { color: white; }
-.badge-chart { bottom: 5%; left: 20px; animation-delay: 2s; background: rgba(10, 35, 25, 0.9); border: 1px solid rgba(75, 255, 163, 0.5); box-shadow: 0 10px 25px rgba(0,0,0,0.2), 0 0 20px rgba(75,255,163,0.4); color: #59f4a4; }
-.badge-chart b { color: white; }
+@keyframes pulse { 50% { opacity: 0.5; } }
+.neon-badge { position: absolute; background: rgba(10, 35, 25, 0.9); color: #59f4a4; padding: 10px 18px; border-radius: 12px; font-size: 11px; border: 1px solid rgba(75, 255, 163, 0.3); box-shadow: 0 10px 25px rgba(0,0,0,0.2); backdrop-filter: blur(10px); z-index: 5; animation: badgeFloat 4s ease-in-out infinite; }
+.badge-formula { top: 15%; left: -30px; } .badge-pivot { bottom: 25%; right: -25px; animation-delay: 1s; } .badge-chart { bottom: 5%; left: 20px; animation-delay: 2s; }
 @keyframes badgeFloat { 50% { transform: translateY(-12px); } }
+.scroll-cue { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; color: #648075; }
 
-/* REAL COMPANY LOGOS MARQUEE */
+/* Company Marquee */
 .company-marquee { padding: 40px 0; background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; overflow: hidden; }
-.company-marquee p { font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #8ba396; margin: 0 0 30px; }
+.company-marquee p { font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #8ba396; margin: 0 0 20px; }
 .marquee-track { width: 100%; overflow: hidden; white-space: nowrap; }
-.marquee-content { display: inline-flex; align-items: center; gap: 70px; animation: scrollMarquee 25s linear infinite; }
-/* Grayscale logo styling matching original UI but using real images */
-.marquee-content img { height: 32px; object-fit: contain; filter: grayscale(1) contrast(0.5) opacity(0.6); transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); cursor: pointer; }
-.marquee-content img:hover { filter: grayscale(0) contrast(1) opacity(1); transform: scale(1.1); }
+.marquee-content { display: inline-flex; gap: 80px; animation: scrollMarquee 20s linear infinite; }
+.marquee-content span { font-size: 24px; font-weight: 900; color: #c4d4cc; text-transform: uppercase; letter-spacing: -1px; }
 @keyframes scrollMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* Stats Section */
@@ -178,6 +159,7 @@ a { text-decoration: none; color: inherit; }
 .bar-wrap span.highlight { color: var(--green); font-size: 13px; }
 @keyframes fillBar { from { width: 0; } }
 
+/* FIXED: Career Highlights UI for the Salary Card */
 .career-highlights { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
 .career-highlights span { background: rgba(35, 224, 139, 0.1); color: #bfe6d0; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; border: 1px solid rgba(35, 224, 139, 0.2); }
 
@@ -190,7 +172,8 @@ a { text-decoration: none; color: inherit; }
 .premium-glow .career-metric span { color: #a0b5ab; }
 .premium-glow small { display: block; margin-top: 20px; color: #718a7d; font-size: 10px; line-height: 1.5; }
 
-/* ANIMATED Free Excel Setup Highlight Banner */
+
+/* NEW: Animated Free Excel Setup Banner */
 .free-excel-banner { background: linear-gradient(135deg, #e5f8ee, #f0fdf6, #d8f1e5); background-size: 200% 200%; animation: gradientMove 6s ease infinite; margin: 50px auto; max-width: 1050px; border-radius: 30px; padding: 50px; display: flex; align-items: center; justify-content: space-between; gap: 40px; border: 1px dashed #0a9f55; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(10, 163, 91, 0.1); }
 @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 .free-excel-content { flex: 1; z-index: 2; }
@@ -216,6 +199,7 @@ a { text-decoration: none; color: inherit; }
 .learning-flow span { background: white; border: 1px solid #d8e9df; padding: 12px 18px; border-radius: 12px; font-size: 12px; color: var(--green); font-weight: 700; box-shadow: 0 8px 20px rgba(8, 80, 45, 0.05); }
 .learning-flow span b { color: var(--dark); margin-left: 5px; }
 
+/* Course PDF Button */
 .curriculum-actions { text-align: center; margin-bottom: 40px; }
 .pdf-btn { background: #0aa35b; color: white !important; font-weight: 800; border: none; padding: 14px 28px; border-radius: 12px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(10, 163, 91, 0.3); transition: 0.3s; }
 .pdf-btn:hover { background: #087d49; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(10, 163, 91, 0.4); }
@@ -234,6 +218,7 @@ a { text-decoration: none; color: inherit; }
 .module-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 .module.open .module-body { max-height: 3500px; }
 
+/* Sub-points structured formatting */
 .topic-panel { padding: 0 30px 30px 85px; }
 .topic-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
 .topic-list > li { font-size: 15px; color: #2d4237; line-height: 1.6; font-weight: 500; }
@@ -243,7 +228,7 @@ a { text-decoration: none; color: inherit; }
 .nested-list li::before { content: ""; position: absolute; left: -16px; top: 10px; width: 10px; height: 2px; background: #eefaf4; }
 .tips-box { background: #fdfaf0; border: 1px dashed #f5db8e; padding: 15px; border-radius: 12px; margin-top: 15px; font-size: 14px; color: #6d5b24; }
 
-/* Benefits */
+/* Benefits (Upgraded 6-Grid) */
 .benefits { background: var(--dark); color: white; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: center; }
 .benefits .label { background: rgba(255,255,255,0.1); color: #6df4aa; border: none; }
 .benefit-copy p { color: #a9c0b4; font-size: 16px; margin-bottom: 30px; }
@@ -373,14 +358,26 @@ footer a:hover { color: white; }
 @media (max-width: 900px) {
   .nav { height: 70px; }
   
+  /* PERFECTED MOBILE MENU OVERLAY */
   .nav-menu { 
-      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; 
-      background: #03120c !important; display: flex; flex-direction: column; align-items: center; justify-content: center; 
-      opacity: 0; visibility: hidden; transform: translateY(-20px); transition: all 0.4s ease; z-index: 99999 !important; 
+      position: fixed; 
+      top: 0; left: 0; 
+      width: 100vw; height: 100vh; 
+      background: #03120c !important; /* Forces solid dark background */
+      display: flex; flex-direction: column; align-items: center; justify-content: center; 
+      opacity: 0; visibility: hidden; transform: translateY(-20px); 
+      transition: all 0.4s ease; 
+      z-index: 99999 !important; 
   }
-  .nav-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
-  .nav-menu a { font-size: 24px; color: #ffffff !important; margin-bottom: 20px; font-weight: 700; }
-  .nav-menu a.active { background: rgba(35, 224, 139, 0.2); padding: 12px 25px; border-radius: 12px; color: #59f4a4 !important; }
+  .nav-menu.open { 
+      opacity: 1; visibility: visible; transform: translateY(0); 
+  }
+  .nav-menu a { 
+      font-size: 24px; color: #ffffff !important; margin-bottom: 20px; font-weight: 700;
+  }
+  .nav-menu a.active { 
+      background: rgba(35, 224, 139, 0.2); padding: 12px 25px; border-radius: 12px; color: #59f4a4 !important;
+  }
   .menu { display: block; z-index: 100000 !important; }
   body.menu-open { overflow: hidden; }
   
