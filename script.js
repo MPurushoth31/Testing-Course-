@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Mobile Menu Toggle
+    // 1. PERFECTED Mobile Menu Toggle
     const menu = document.querySelector(".menu");
-    const navMenu = document.querySelector(".nav-menu"); // Updated class
+    const navMenu = document.querySelector(".nav-menu"); 
     const navbar = document.querySelector(".nav");
 
     menu.addEventListener("click", () => {
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         lastScroll = current;
 
-        // ScrollSpy
         let currentSection = "";
         sections.forEach(section => {
             if (current + 180 >= section.offsetTop) {
@@ -63,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.1 });
-    
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     // 4. Curriculum Accordion
@@ -88,14 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Copy UPI ID with Toast
     const copyBtn = document.getElementById('copyUpi');
     const toast = document.getElementById('toast');
-    
     if (copyBtn) {
         copyBtn.addEventListener('click', async function() {
             const upiText = document.getElementById('upi').textContent;
             try {
                 await navigator.clipboard.writeText(upiText);
                 this.textContent = 'Copied ✓';
-                
                 toast.classList.add('show');
                 setTimeout(() => {
                     toast.classList.remove('show');
@@ -124,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { formula: '=GETPIVOTDATA("Sales",A1)', status: 'Creating Interactive Charts...' }
     ];
     let demoIndex = 0;
-
     function runFormulaDemo() {
         const target = document.getElementById('typedFormula');
         const status = document.getElementById('demoStatus');
@@ -174,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.35 });
-    
     document.querySelectorAll('.counter').forEach(counter => countObserver.observe(counter));
 
     // 10. Magnetic Effect
