@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const seatsText = document.getElementById('seats-left');
     if (seatsText) {
         setTimeout(() => {
-            seatsText.textContent = "Only 5 Seats Left";
+            seatsText.textContent = "Limited Seats Only";
             seatsText.style.color = "#ff3d71";
             seatsText.style.transform = "scale(1.1)";
             setTimeout(() => seatsText.style.transform = "scale(1)", 300);
