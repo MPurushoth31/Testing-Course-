@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. PERFECTED Mobile Menu Toggle
+    // 1. Mobile Menu Toggle
     const menu = document.querySelector(".menu");
     const navMenu = document.querySelector(".nav-menu"); 
     const navbar = document.querySelector(".nav");
